@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-foreground: #ffffff;
+  --color-background: #000000;
+}
+
+/* @layer components {
+  
+} */
+
+@layer utilities {
+  .mask-clip-path {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .main {
+    @apply min-h-screen w-screen p-0 m-0 relative overflow-x-hidden;
+  }
+
+  .section {
+    @apply flex flex-col items-center justify-center w-full h-full;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #303030;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #000000 #111;
+}
