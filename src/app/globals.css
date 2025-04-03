@@ -13,6 +13,14 @@
   .mask-clip-path {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
+
+  .absolute-center {
+    @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
   .main {
     @apply min-h-screen w-screen p-0 m-0 relative overflow-x-hidden;
   }

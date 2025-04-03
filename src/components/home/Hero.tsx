@@ -37,7 +37,7 @@ export default function Hero() {
     <section className="relative h-dvh w-screen overflow-x-hidden">
       <div
         id="hero"
-        className="section relative z-10 h-dvh w-screen overflow-hidden rounded-none text-white bg-red-400"
+        className="section relative z-10 h-dvh w-screen overflow-hidden rounded-none text-white bg-gray-800"
       >
         Hero Section
       </div>

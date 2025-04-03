@@ -4,6 +4,7 @@ import "./globals.css";
 import { ViewTransitions } from "next-view-transitions";
 import { siteConfig } from "@/config/site";
 import SmoothScrollContext from "@/components/ui/SmoothScrollContext";
+import NavBar from "@/components/ui/NavBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -55,7 +56,10 @@ export default function RootLayout({
       <html lang="en">
         <body className={`${geistSans.variable} ${geistMono.variable}`}>
           <SmoothScrollContext>
-            <div className="bg-black">{children}</div>
+            <div>
+              <NavBar />
+              {children}
+            </div>
           </SmoothScrollContext>
         </body>
       </html>
