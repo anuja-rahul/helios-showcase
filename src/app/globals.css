@@ -22,7 +22,7 @@
     @apply flex items-center justify-center;
   }
   .section {
-    @apply flex flex-col items-center justify-center w-full h-full;
+    @apply flex flex-col items-center justify-center w-full h-full !overflow-x-hidden;
   }
 }
 

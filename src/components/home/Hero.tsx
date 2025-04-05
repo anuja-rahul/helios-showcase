@@ -14,7 +14,8 @@ export default function Hero() {
     });
 
     gsap.from("#hero", {
-      clipPath: "polygon(5% 10%, 90% 20%, 95% 85%, 10% 95%)",
+      // clipPath: "polygon(5% 10%, 90% 20%, 95% 85%, 10% 95%)",
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       borderRadius: "0% 0% 0% 0%",
       ease: "power1.inOut",
       scrollTrigger: {
@@ -24,20 +25,20 @@ export default function Hero() {
         scrub: true,
       },
     });
-    gsap.to("#hero", {
-      y: -15,
-      repeat: -1,
-      yoyo: true,
-      duration: 3,
-      ease: "power1.inOut",
-    });
+    // gsap.to("#hero", {
+    //   y: -15,
+    //   repeat: -1,
+    //   yoyo: true,
+    //   duration: 3,
+    //   ease: "power1.inOut",
+    // });
   });
 
   return (
-    <section className="relative h-dvh w-screen overflow-x-hidden">
+    <section className="relative h-dvh w-screen !overflow-hidden">
       <div
         id="hero"
-        className="section relative z-10 h-dvh w-screen overflow-hidden rounded-none text-white bg-gray-800"
+        className="section relative z-10 h-dvh w-full max-w-screen !overflow-hidden rounded-none text-white bg-gray-800"
       >
         Hero Section
       </div>

@@ -3,7 +3,7 @@ import Hero from "@/components/home/Hero";
 
 export default function Home() {
   return (
-    <main className="relative main h-[200vh] bg-background text-white">
+    <main className="relative w-screen !overflow-x-hidden main min-h-dvh bg-background text-white box-border">
       <Hero />
       <About />
     </main>

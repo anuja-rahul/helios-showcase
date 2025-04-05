@@ -64,7 +64,13 @@ export default function ColorScrollParent({
     lenis?.on("scroll", ScrollTrigger.update);
   }, [lenis]);
 
-  return <div className={cn(className)}>{children}</div>;
+  return (
+    <div
+      className={cn("w-full !overflow-x-hidden p-0 m-0 box-border", className)}
+    >
+      {children}
+    </div>
+  );
 }
 
 export const ColorScrollSection = ({
@@ -77,7 +83,10 @@ export const ColorScrollSection = ({
     <section
       data-bg-color={bgColor}
       data-text-color={textColor}
-      className={cn("scroller", className)}
+      className={cn(
+        "scroller w-full !overflow-x-hidden h-full p-0 m-0 box-border",
+        className
+      )}
     >
       {children}
     </section>

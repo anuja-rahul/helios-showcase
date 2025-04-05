@@ -1,16 +1,14 @@
 import {
   FaFacebook,
   FaGithub,
-  FaHome,
   FaInstagram,
   FaLinkedin,
   FaPhone,
   FaProjectDiagram,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { IoDocument } from "react-icons/io5";
 import { LuText } from "react-icons/lu";
-import { MdMail } from "react-icons/md";
+import { MdMail, MdTimeline } from "react-icons/md";
 import { RiContactsLine } from "react-icons/ri";
 
 export type siteConfig = typeof siteConfig;
@@ -18,17 +16,17 @@ export type NavBarConfig = typeof navBarConfig;
 
 export const siteConfig = {
   //  Update accordingly to your specifications
-  name: "John Doe",
-  longName: "John Doe - Software Engineer | tech Enthusiast",
+  name: "Evoke",
+  longName: "Evoke - Sparking digital engagement",
   description:
-    "A software engineer with a passion for building web applications.",
+    "Providing digital solutions that ignite engagement and drive results.",
   // if you have a custom domain, you can add it here
   //  it's very important you include the correct url here
   // otherwise the generated sitemap.xml and robots.txt will display the wrong url
   // Do not include a slash at the end of the url
   // e.g. https://example.com
-  url: "https://portfolio-builder-template.vercel.app",
-  creator: "@johnDoe",
+  url: "https://evoke-landingpage.vercel.app",
+  creator: "@AnujaRahul07",
   ogImgUrl: "img/opengraph-image.jpg",
   contactLinks: [
     // include your social media links here
@@ -42,9 +40,10 @@ export const siteConfig = {
 
 export const siteMapConfig = [
   //  Update accordingly to your specifications
-  { name: "Home", href: "/", icon: <FaHome /> },
   { name: "About", href: "/about", icon: <LuText /> },
   { name: "Projects", href: "/projects", icon: <FaProjectDiagram /> },
+  { name: "Journey", href: "/journey", icon: <MdTimeline /> },
+
   { name: "Contact", href: "/contact", icon: <RiContactsLine /> },
 ];
 
@@ -52,7 +51,6 @@ export const navBarConfig = [
   ...siteMapConfig,
   // highly recommend storing your resume in a public place like Google Drive or Dropbox and linking it here
   // and replace the href with the link to your resume
-  { name: "CV", href: "https://drive.google.com", icon: <IoDocument /> },
 ];
 
 export const homePageConfig = {
