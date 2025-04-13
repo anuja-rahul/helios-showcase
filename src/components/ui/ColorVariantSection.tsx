@@ -37,12 +37,14 @@ export default function ColorScrollParent({
             backgroundColor: (section as HTMLElement).dataset.bgColor,
             color: (section as HTMLElement).dataset.textColor,
             overwrite: "auto",
+            duration: 0,
           });
 
           gsap.to("[data-bg-color]", {
             color: (section as HTMLElement).dataset.textColor,
             backgroundColor: (section as HTMLElement).dataset.bgColor,
             overwrite: "auto",
+            duration: 0,
           });
         },
         onLeaveBack: () => {
@@ -50,12 +52,14 @@ export default function ColorScrollParent({
             backgroundColor: prevBgColor,
             color: prevTextColor,
             overwrite: "auto",
+            duration: 0,
           });
 
           gsap.to("[data-bg-color]", {
             color: prevTextColor,
             backgroundColor: prevBgColor,
             overwrite: "auto",
+            duration: 0,
           });
         },
       });

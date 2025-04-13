@@ -5,6 +5,7 @@ import { ViewTransitions } from "next-view-transitions";
 import { siteConfig } from "@/config/site";
 import SmoothScrollContext from "@/components/ui/SmoothScrollContext";
 import Header from "@/components/ui/Header";
+import Footer from "@/components/ui/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -59,6 +60,7 @@ export default function RootLayout({
             <div>
               <Header />
               {children}
+              <Footer />
             </div>
           </SmoothScrollContext>
         </body>
