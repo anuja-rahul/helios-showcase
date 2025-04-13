@@ -29,7 +29,8 @@ const SlideTabs = () => {
           opacity: 0,
         }));
       }}
-      className="relative mx-auto flex items-center justify-center w-fit rounded-full border-2 border-none bg-transparent p-1"
+      className="relative mx-auto flex items-center justify-center w-fit rounded-full border-2 border-none bg-transparent
+      p-1 tracking-wider font-stretch-90%"
     >
       {navBarConfig.map((item) => (
         <Tab
@@ -38,7 +39,7 @@ const SlideTabs = () => {
           setPosition={setPosition}
           external={item.name === "CV"}
         >
-          <span className="hidden md:flex">{item.name}</span>
+          <span className="hidden md:flex text-[11px] tracking-wider">{item.name}</span>
           <span className="flex md:hidden">{item.icon}</span>
         </Tab>
       ))}
