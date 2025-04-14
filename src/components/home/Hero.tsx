@@ -3,7 +3,8 @@
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import ScrambleHoverText from "../ui/text-effects/ScrambleHoverText";
+import AnimatedTitle from "../ui/text-effects/AnimatedTitle";
+import MovingBgLink from "../ui/text-effects/MovingBgLink";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,8 +43,14 @@ export default function Hero() {
         id="hero"
         className="section relative z-10 h-dvh w-full max-w-screen !overflow-hidden rounded-none text-white bg-gray-800"
       >
-        Hero Section
-        <ScrambleHoverText text="hello" />
+        <AnimatedTitle title="Evoke <br />" sectionId="hero" />
+        <p className="font-general tracking-tighter">
+          Built for impact. Delivered like a product
+        </p>
+        <MovingBgLink href="/" text="Hello" />
+        {/* <h2 className="font-general uppercase text-[10px]">
+          want to learn more ?
+        </h2> */}
       </div>
     </section>
   );

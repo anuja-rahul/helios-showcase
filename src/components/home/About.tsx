@@ -1,6 +1,7 @@
 import ColorScrollParent, {
   ColorScrollSection,
 } from "../ui/ColorVariantSection";
+import AnimatedTitle from "../ui/text-effects/AnimatedTitle";
 
 export default function NavBar() {
   return (
@@ -13,6 +14,7 @@ export default function NavBar() {
           textColor="#ffffff"
         >
           <h1 className="text-9xl">Section 1</h1>
+          <AnimatedTitle title="Section 1 <br />" />
         </ColorScrollSection>
         <ColorScrollSection
           className="h-screen w-full overflow-x-hidden flex flex-col items-center justify-center"
