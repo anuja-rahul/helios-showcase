@@ -47,7 +47,7 @@ export default function Hero() {
         <p className="font-general tracking-tighter">
           Built for impact. Delivered like a product
         </p>
-        <MovingBgLink href="/" text="Hello" />
+        <MovingBgLink href="/" text="Test Link" />
         {/* <h2 className="font-general uppercase text-[10px]">
           want to learn more ?
         </h2> */}

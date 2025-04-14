@@ -13,7 +13,6 @@ export default function NavBar() {
           bgColor="#000000"
           textColor="#ffffff"
         >
-          <h1 className="text-9xl">Section 1</h1>
           <AnimatedTitle title="Section 1 <br />" />
         </ColorScrollSection>
         <ColorScrollSection
@@ -21,14 +20,14 @@ export default function NavBar() {
           bgColor="#ceff1f"
           textColor="#000000"
         >
-          <h1 className="text-9xl">Section 2</h1>
+          <AnimatedTitle title="Section 2 <br />" />
         </ColorScrollSection>
         <ColorScrollSection
           className="h-screen w-full overflow-x-hidden flex flex-col items-center justify-center"
           bgColor="#fcba03"
           textColor="#ffffff"
         >
-          <h1 className="text-9xl">Section 3</h1>
+          <AnimatedTitle title="Section 3 <br />" />
         </ColorScrollSection>
       </ColorScrollParent>
     </section>

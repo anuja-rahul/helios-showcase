@@ -4,6 +4,7 @@ import { cn } from "@/lib/util";
 import { motion } from "motion/react";
 import Link from "next/link";
 import { useRef } from "react";
+import ScrambleHoverText from "./ScrambleHoverText";
 
 interface AnimatedHoverBgProps {
   text: string;
@@ -23,16 +24,16 @@ export default function AnimatedHoverBg({
     <div
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={cn("relative w-fit h-fit bg-transparent", className)}
+      className={cn("relative w-fit h-fit bg-transparent overflow-hidden mx-2", className)}
     >
       <Link
-        className="mix-blend-difference w-fit h-auto z-10 text-white relative bg-transparent"
+        className="hover:mix-blend-difference w-fit h-auto z-10 text-white relative bg-transparent"
         ref={linkRef}
         href={href}
       >
-        {text}
+        <ScrambleHoverText text={text} className="font-general text-xl" />
       </Link>
-      <motion.div className="w-full bg-white h-full absolute inset-0" />
+      <motion.div className="w-40 bg-white h-full absolute inset-0 -translate-x-40" />
     </div>
   );
 }
