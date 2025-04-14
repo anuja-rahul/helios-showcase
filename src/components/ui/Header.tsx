@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <nav className="max-w-screen w-full !overflow-hidden h-20 flex-center absolute bg-transparent text-white !z-[9999] px-4">
       <div className="flex justify-between items-center w-full h-full text-white">
-        <div className="flex items-start w-1/2 pl-4 gap-4">
+        <div className="flex items-start w-1/2 pl-4 gap-2">
           <AnimatedLink
             href="/"
             title="Products"

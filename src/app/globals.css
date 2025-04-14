@@ -11,6 +11,8 @@ body {
 @theme {
   --color-foreground: #ffffff;
   --color-background: #000000;
+  --color-primary: #cfff3d;
+  --color-secondary: #fcba03;
   --font-general-sans: "general-sans", sans-serif;
   --font-mona-sans: "mona-sans", sans-serif;
   --font-circular-web: "circular-web", sans-serif;

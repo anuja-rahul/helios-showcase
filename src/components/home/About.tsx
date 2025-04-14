@@ -8,9 +8,9 @@ export default function NavBar() {
     <section className="relative min-h-dvh h-auto w-full overflow-x-hidden">
       <ColorScrollParent className="h-auto w-full p-0 m-0">
         <ColorScrollSection
-          className="h-screen w-full overflow-x-hidden bg-white text-black flex flex-col items-center justify-center"
-          bgColor="#ffffff"
-          textColor="#000000"
+          className="h-screen w-full overflow-x-hidden bg-black text-white flex flex-col items-center justify-center"
+          bgColor="#000000"
+          textColor="#ffffff"
         >
           <h1 className="text-9xl">Section 1</h1>
         </ColorScrollSection>

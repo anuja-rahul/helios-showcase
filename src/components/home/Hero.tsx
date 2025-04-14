@@ -9,7 +9,8 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Hero() {
   useGSAP(() => {
     gsap.set("#hero", {
-      clipPath: "polygon(50% 50%, 50.1% 50.1%, 50.2% 50.2%, 50.3% 50.3%)",
+      // clipPath: "polygon(50% 50%, 50.1% 50.1%, 50.2% 50.2%, 50.3% 50.3%)",
+      clipPath: "polygon(17% 20%, 79% 28%, 86% 84%, 18% 93%)",
       borderRadius: "0% 0% 40% 10%",
     });
 
