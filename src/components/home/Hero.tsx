@@ -3,6 +3,7 @@
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import ScrambleHoverText from "../ui/text-effects/ScrambleHoverText";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,6 +43,7 @@ export default function Hero() {
         className="section relative z-10 h-dvh w-full max-w-screen !overflow-hidden rounded-none text-white bg-gray-800"
       >
         Hero Section
+        <ScrambleHoverText text="hello" />
       </div>
     </section>
   );
