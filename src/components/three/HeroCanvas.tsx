@@ -10,7 +10,7 @@ export default function HeroCanvas() {
       <Canvas camera={{ position: [0, 0, 7] }}>
         <Suspense
           fallback={
-            <Text color="white" fontSize={3} anchorX="center" anchorY="middle">
+            <Text color="white" fontSize={1} anchorX="center" anchorY="middle">
               Loading Canvas...
             </Text>
           }
