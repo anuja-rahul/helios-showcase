@@ -48,7 +48,7 @@ const AnimatedTitle = ({ title, className, sectionId }: AnimatedTilteProps) => {
           {line.split(" ").map((word, i) => (
             <span
               key={i}
-              className="animated-word"
+              className="animated-word text-shadow-sm"
               dangerouslySetInnerHTML={{ __html: word }}
             />
           ))}

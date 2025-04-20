@@ -10,12 +10,19 @@ export default function HeroCanvas() {
       <Canvas camera={{ position: [0, 0, 7] }}>
         <Suspense
           fallback={
-            <Text color="white" fontSize={1} anchorX="center" anchorY="middle">
+            <Text color="white" fontSize={0.2} anchorX="center" anchorY="middle">
               Loading Canvas...
             </Text>
           }
         >
           {/* <OrbitControls /> */}
+          <directionalLight
+            position={[-5, 5, 5]}
+            intensity={1.5}
+            color={"white"}
+            castShadow
+          />
+
           <ContactShadows
             opacity={0.3}
             color={"white"}
