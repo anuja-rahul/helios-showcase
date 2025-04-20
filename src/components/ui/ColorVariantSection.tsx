@@ -3,7 +3,7 @@
 import { cn } from "@/lib/util";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useSmoothScroller } from "./SmoothScrollContext";
 
 interface ColorVariantSectionProps {
@@ -12,15 +12,40 @@ interface ColorVariantSectionProps {
   children: React.ReactNode;
   className?: string;
 }
+gsap.registerPlugin(ScrollTrigger);
 
 export default function ColorScrollParent({
   children,
   className,
 }: ColorVariantSectionProps) {
   const lenis = useSmoothScroller();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    // gsap.registerPlugin(ScrollTrigger);
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    const currentContainer = containerRef.current;
+    if (currentContainer) {
+      observer.observe(currentContainer);
+    }
+
+    return () => {
+      if (currentContainer) {
+        observer.unobserve(currentContainer);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
 
     const sectionColor = document.querySelectorAll("[data-bg-color]");
     sectionColor.forEach((section, i) => {
@@ -66,10 +91,14 @@ export default function ColorScrollParent({
     });
 
     lenis?.on("scroll", ScrollTrigger.update);
-  }, [lenis]);
+    // return () => {
+    //   ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    // };
+  }, [lenis, isVisible]);
 
   return (
     <div
+      ref={containerRef}
       className={cn("w-full !overflow-x-hidden p-0 m-0 box-border", className)}
     >
       {children}

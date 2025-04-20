@@ -1,7 +1,7 @@
 import { FaChevronDown } from "react-icons/fa";
 import AnimatedLink from "./buttons/AnimatedLink";
 import NavBar from "./NavBar";
-import { BiSolidCarousel } from "react-icons/bi";
+// import { BiSolidCarousel } from "react-icons/bi";
 
 export default function Header() {
   return (
@@ -13,11 +13,11 @@ export default function Header() {
             title="Products"
             rightIcon={<FaChevronDown />}
           />
-          <AnimatedLink
+          {/* <AnimatedLink
             href="/"
             title="Projects"
             rightIcon={<BiSolidCarousel />}
-          />
+          /> */}
         </div>
         <div className="flex flex-row items-center justify-end w-1/2">
           <NavBar />
