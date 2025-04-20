@@ -36,7 +36,7 @@ export default function AnimatedLink({
   });
   const handleMouseEnter = () => {
     if (pathRef.current) {
-      pathRef.current.setAttribute("fill", "#cfff3d");
+      pathRef.current.setAttribute("fill", "#cd92fc");
     }
     const targetIndex = indexOfPath === paths.length - 1 ? 0 : indexOfPath + 1;
 
