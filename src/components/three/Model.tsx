@@ -22,6 +22,8 @@ export default function Model() {
       rotationIntensity={1}
       floatIntensity={3}
       scale={[1.4, 1.4, 1.4]}
+      castShadow
+      receiveShadow
     >
       <group position={[0, -1, 0]} ref={groupRef} scale={[1.4, 1.4, 1.4]}>
         <Crystal />

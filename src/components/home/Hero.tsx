@@ -5,7 +5,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 
 import AnimatedTitle from "../ui/text-effects/AnimatedTitle";
-import MovingBgLink from "../ui/text-effects/MovingBgLink";
 import HeroCanvas from "../three/HeroCanvas";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -45,15 +44,16 @@ export default function Hero() {
         id="hero"
         className="section relative z-10 h-dvh w-full max-w-screen !overflow-hidden rounded-none text-white bg-transparent"
       >
-        <AnimatedTitle
-          title="AXEZ <br />"
-          sectionId="hero"
-          className="z-10 text-white opacity-85"
-        />
-        <p className="font-general tracking-tighter z-10 opacity-80">
-          Built for impact. Delivered like a product
-        </p>
-        <MovingBgLink href="/" text="Test Link" />
+        <div className="flex flex-col items-center justify-center px-6 gap-6 w-full h-full">
+          <AnimatedTitle
+            title="AXEZ <br />"
+            sectionId="hero"
+            className="z-10 !text-inherit opacity-90 text-shadow-sm text-shadow-black/30"
+          />
+          <p className="font-general tracking-tighter z-10 opacity-90 max-w-sm text-balance text-center text-xs md:text-sm text-shadow-sm text-shadow-black/30">
+            Built for impact. Delivered like a product
+          </p>
+        </div>
 
         <HeroCanvas />
       </div>

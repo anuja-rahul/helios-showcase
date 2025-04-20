@@ -39,7 +39,7 @@ export default function ScrambleHoverText({
       ref={ref}
       onMouseEnter={handleMouseEnter}
       className={cn(
-        "bg-transparent text-white text-3xl font-mona-sans uppercase",
+        "bg-transparent text-white font-mona-sans uppercase",
         className
       )}
     >
