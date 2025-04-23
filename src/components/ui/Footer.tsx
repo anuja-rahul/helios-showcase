@@ -11,18 +11,18 @@ export default function Footer() {
       {/* <HoverStretchText text="AXEZ" /> */}
       <div className="flex flex-row gap-2 items-center justify-center h-auto w-full">
         <div className="flex flex-col gap-1 items-end justify-center h-auto w-1/2 !tracking-wide">
-          <MovingBgLink href="/" className="!text-[10px]" text="About" />
-          <MovingBgLink href="/" className="!text-[10px]" text="Products" />
-          <MovingBgLink href="/" className="!text-[10px]" text="Journey" />
-          <MovingBgLink href="/" className="!text-[10px]" text="Contact Us" />
-          <MovingBgLink href="/" className="!text-[10px]" text="Terms" />
+          <MovingBgLink href="#" className="!text-[10px]" text="About" />
+          <MovingBgLink href="#" className="!text-[10px]" text="Products" />
+          <MovingBgLink href="#" className="!text-[10px]" text="Journey" />
+          <MovingBgLink href="#" className="!text-[10px]" text="Contact Us" />
+          <MovingBgLink href="#" className="!text-[10px]" text="Terms" />
         </div>
         <div className="flex flex-col gap-1 items-start justify-center h-auto w-1/2 !tracking-wide">
-          <MovingBgLink href="/" className="!text-[10px]" text="Careers" />
-          <MovingBgLink href="/" className="!text-[10px]" text="Team" />
-          <MovingBgLink href="/" className="!text-[10px]" text="Reviews" />
-          <MovingBgLink href="/" className="!text-[10px]" text="Partners" />
-          <MovingBgLink href="/" className="!text-[10px]" text="Services" />
+          <MovingBgLink href="#" className="!text-[10px]" text="Careers" />
+          <MovingBgLink href="#" className="!text-[10px]" text="Team" />
+          <MovingBgLink href="#" className="!text-[10px]" text="Reviews" />
+          <MovingBgLink href="#" className="!text-[10px]" text="Partners" />
+          <MovingBgLink href="#" className="!text-[10px]" text="Services" />
         </div>
       </div>
     </footer>
