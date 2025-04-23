@@ -6,14 +6,21 @@ import { useRef } from "react";
 interface ScrambleHoverTextProps {
   text: string;
   className?: string;
+  onHover?: boolean;
 }
 
 export default function ScrambleHoverText({
   text,
   className,
+  onHover = true,
 }: ScrambleHoverTextProps) {
   const ref = useRef<HTMLHeadingElement>(null);
   const handleMouseEnter = () => {
+    if (onHover) {
+      scrambleEffect();
+    }
+  };
+  const scrambleEffect = () => {
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     if (ref.current) {
       const event = ref.current;
