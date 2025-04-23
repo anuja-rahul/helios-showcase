@@ -16,7 +16,7 @@ export default function NavBar() {
         >
           <AnimatedTitle title="Section 1 <br />" />
           <div className="flex flex-col md:flex-row items-center justify-center w-full h-auto gap-2 md:gap-6 px-4 overflow-hidden">
-            <div className="w-1/2 flex flex-col items-end justify-center flex-nowrap overflow-hidden gap-2 md:gap-6 md:mt-20">
+            <div className="w-full md:w-1/2 flex flex-col items-end justify-center flex-nowrap overflow-hidden gap-2 md:gap-6 md:mt-20">
               <ScrambleLoadText
                 text="At our core <br /> we turn ideas into <br /> impactful digital experiences <br /> that captivate and convert."
                 direction="left"
@@ -26,7 +26,7 @@ export default function NavBar() {
                 direction="right"
               />
             </div>
-            <div className="w-1/2 flex flex-col items-start justify-center flex-nowrap overflow-hidden gap-2 md:gap-6">
+            <div className="w-full md:w-1/2 flex flex-col items-start justify-center flex-nowrap overflow-hidden gap-2 md:gap-6">
               <ScrambleLoadText
                 text="we design and develop <br /> digital experiences that  <br /> leave a lasting impression."
                 direction="right"
