@@ -15,23 +15,25 @@ export default function NavBar() {
           textColor="#ffffff"
         >
           <AnimatedTitle title="Section 1 <br />" />
-          <div className="flex flex-row items-center justify-center w-full h-auto text-[10px] md:text-sm gap-6">
-            <div className="w-1/2 flex flex-col items-end justify-center">
+          <div className="flex flex-col md:flex-row items-center justify-center w-full h-auto gap-2 md:gap-6 px-4 overflow-hidden">
+            <div className="w-1/2 flex flex-col items-end justify-center flex-nowrap overflow-hidden gap-2 md:gap-6 md:mt-20">
               <ScrambleLoadText
-                text="At our core <br /> we turn ideas into <br /> impactful digital experiences that"
+                text="At our core <br /> we turn ideas into <br /> impactful digital experiences <br /> that captivate and convert."
                 direction="left"
               />
               <ScrambleLoadText
-                className="mt-5"
-                text="to cutting-edge development, <br /> leave a lasting impression. <br /> innovative solutions"
+                text="From sleek designs to cutting <br /> edge development we create <br /> solutions that drive results."
                 direction="right"
               />
             </div>
-            <div className="w-1/2 flex flex-col items-start justify-center mt-3">
+            <div className="w-1/2 flex flex-col items-start justify-center flex-nowrap overflow-hidden gap-2 md:gap-6">
               <ScrambleLoadText
-              className="mt-3"
-                text="captivate and convert. <br /> From sleek designs <br /> we create websites that <br /> Together, we build"
+                text="we design and develop <br /> digital experiences that  <br /> leave a lasting impression."
                 direction="right"
+              />
+              <ScrambleLoadText
+                text="we build innovative solutions <br /> tailored to help your brand  <br /> thrive in the digital world."
+                direction="left"
               />
             </div>
           </div>

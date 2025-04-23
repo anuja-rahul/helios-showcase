@@ -75,7 +75,7 @@ export default function ScrambleLoadText({
   return (
     <div
       className={cn(
-        `flex flex-col justify-center overflow-x-hidden w-fit ${
+        `flex flex-col justify-center !overflow-hidden w-fit flex-nowrap relative ${
           direction === "left" ? "items-start" : "items-end"
         }`,
         className
@@ -85,12 +85,15 @@ export default function ScrambleLoadText({
         const marginValue = index * margin;
         return (
           <motion.span
+            onMouseEnter={() => {
+              scrambleEffect(ref.current[index], line);
+            }}
             ref={(el) => {
               if (el) {
                 ref.current[index] = el;
               }
             }}
-            className="flex flex-col flex-nowrap gap-2 overflow-x-hidden w-fit font-general uppercase"
+            className="flex flex-col !flex-nowrap gap-2 overflow-hidden font-general uppercase text-[8px] md:text-xs !lg:text-md"
             style={{
               marginLeft: direction === "left" ? `${marginValue}px` : undefined,
               marginRight:
