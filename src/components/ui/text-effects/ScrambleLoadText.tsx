@@ -17,7 +17,8 @@ export default function ScrambleLoadText({
   margin = 30,
   className,
 }: ScrambleLoadTextProps) {
-  const ref = useRef<HTMLSpanElement[]>([]); // Use array of refs for multiple lines
+  const ref = useRef<HTMLSpanElement[]>([]);
+  const hasRun = useRef<boolean[]>([]);
 
   const scrambleEffect = (lineRef: HTMLSpanElement, originalText: string) => {
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -38,40 +39,43 @@ export default function ScrambleLoadText({
     }, 30);
   };
 
+  const textArray = text.split("<br />");
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           ref.current.forEach((lineRef, index) => {
-            scrambleEffect(lineRef, textArray[index]); // Trigger scramble for each line
+            if (!hasRun.current[index] && lineRef) {
+              scrambleEffect(lineRef, textArray[index]);
+              hasRun.current[index] = true;
+            }
           });
         }
       },
-      { threshold: 0.5 } // Adjust threshold as needed
+      { threshold: 0.5 }
     );
 
-    ref.current.forEach((lineRef) => {
-      if (lineRef) {
-        observer.observe(lineRef);
-      }
+    ref.current.forEach((lineRef, index) => {
+      hasRun.current[index] = false;
+      if (lineRef) observer.observe(lineRef);
     });
 
+    const linesAtMount = [...ref.current];
+
     return () => {
-      ref.current.forEach((lineRef) => {
+      linesAtMount.forEach((lineRef) => {
         if (lineRef) {
           observer.unobserve(lineRef);
         }
       });
     };
-  }, []);
-
-  // Preprocess text into an array of strings
-  const textArray = text.split("<br />");
+  }, [textArray]);
 
   return (
     <div
       className={cn(
-        `flex flex-col justify-center overflow-x-hidden w-fit ${
+        `flex flex-col justify-center !overflow-hidden w-fit flex-nowrap relative ${
           direction === "left" ? "items-start" : "items-end"
         }`,
         className
@@ -81,12 +85,15 @@ export default function ScrambleLoadText({
         const marginValue = index * margin;
         return (
           <motion.span
+            onMouseEnter={() => {
+              scrambleEffect(ref.current[index], line);
+            }}
             ref={(el) => {
               if (el) {
                 ref.current[index] = el;
               }
-            }} // Dynamically assign ref for each line
-            className="flex flex-col flex-nowrap gap-2 overflow-x-hidden w-fit font-general uppercase"
+            }}
+            className="flex flex-col !flex-nowrap gap-2 overflow-hidden font-general uppercase text-[8px] md:text-xs !lg:text-md"
             style={{
               marginLeft: direction === "left" ? `${marginValue}px` : undefined,
               marginRight:
