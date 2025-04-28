@@ -44,6 +44,7 @@ export default function NavBar() {
           textColor="#000000"
         >
           <AnimatedTitle title="Section 2 <br />" />
+          {/* <BlockHoverTextComponent text="Section 2" /> */}
         </ColorScrollSection>
         <ColorScrollSection
           className="h-screen w-full overflow-x-hidden flex flex-col items-center justify-center"
